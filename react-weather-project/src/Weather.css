@@ -1,5 +1,6 @@
 .App {
   background: rgb(226, 226, 219);
+  padding: 50px;
 }
 
 .container {
@@ -39,4 +40,28 @@ h1 {
   display: inline-flex;
   padding: 70px;
   margin-left: 280px;
+}
+::placeholder{
+color: rgb(20, 20, 91);
+}
+
+input[type=search]{
+padding: 5px;
+border: 1px solid #efc9af;
+border-radius: 4px;
+}
+
+input[type=submit]{
+padding: 10px;
+border: 1px solid;
+border-radius: 4px;
+
+}
+.code{
+    font-size: 18px;
+    color: black;
+    
+}
+.code:hover{
+    color:rgb(81, 12, 81);
 }
