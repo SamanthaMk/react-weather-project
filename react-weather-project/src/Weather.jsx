@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DateNow from "./DateNow";
 import axios from "axios";
 import "./Weather.css";
 
@@ -7,6 +8,7 @@ export default function Weather() {
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
     console.log(response.data);
+    console.log(response.data);
     setReady(true);
     setWeatherData({
       temperature: Math.round(response.data.temperature.current),
@@ -14,9 +16,9 @@ export default function Weather() {
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       description: response.data.condition.description,
-      date: " Friday 07:00 03/Dec",
+      date: new Date(response.data.time * 1000),
       iconInfo: response.data.condition.icon,
-      icon: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+      icon: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
     });
   }
 
@@ -44,14 +46,14 @@ export default function Weather() {
                   <h3>
                     <br />
 
-                    <span id="date">{weatherData.date}</span>
+                    <span id="date">
+                      {" "}
+                      <DateNow date={weatherData.date} />{" "}
+                    </span>
                   </h3>
                   <strong id="temperature">{weatherData.temperature}</strong>
-                  <span class="units">°C</span>
-                  {" "}
-                  <br/>
+                  <span class="units">°C</span> <br />
                   <img src={weatherData.icon} alt={weatherData.iconInfo} />
-                  
                 </div>
               </div>
 
