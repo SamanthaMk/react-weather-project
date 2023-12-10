@@ -1,17 +1,15 @@
-.App {
-  background: rgb(226, 226, 219);
-  padding: 50px;
-}
 
 .container {
-  width: 700px;
-  height: 550px;
+  width: 650px;
+  height: 400px;
   background-color: rgb(33, 3, 70);
   border-radius: 10px;
   color: bisque;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  margin: 0 auto;
-  padding: 0;
+margin: 100px;
+  padding: 20px;
+  padding-bottom: 240px;
+
 }
 
 h1 {
@@ -29,32 +27,37 @@ h1 {
   );
   border: 1px black solid;
   display: flex;
+  border-radius: 10px;
+  list-style: none;
+  
+  
 }
 
 .right-info {
-  color: black;
-  background: darkorchid;
-  font: 18px;
-  display: flexbox;
-  border: 1px black solid;
-  display: inline-flex;
-  padding: 70px;
-  margin-left: 280px;
+  color:white;
+  text-align: center;
+  font: 10px;
+  margin-left: 20px;
+  padding: 1%;
+  list-style: none;
+ 
+border-radius: 10px;
+
 }
 ::placeholder{
 color: rgb(20, 20, 91);
 }
 
 input[type=search]{
-padding: 5px;
+padding: 6px;
 border: 1px solid #efc9af;
-border-radius: 4px;
+
 }
 
 input[type=submit]{
-padding: 10px;
+padding: 7px;
 border: 1px solid;
-border-radius: 4px;
+
 
 }
 .code{
